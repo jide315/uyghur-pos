@@ -1,0 +1,10 @@
+cff-version: 1.2.0
+message: "Please cite the original UD and Stanza resources as well as this experiment."
+title: "Uyghur POS: reproducible small-model CPU experiments"
+authors:
+  - name: "uyghur-pos contributors"
+type: software
+version: 0.1.0
+date-released: 2026-11-13
+license: MIT
+abstract: "Pretokenized UPOS experiments; original code MIT, data and pretrained resources separately licensed."

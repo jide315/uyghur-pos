@@ -1,0 +1,104 @@
+{
+  "created_utc": "2026-11-13T22:54:25.314196+00:00",
+  "candidate_config": "distilled",
+  "control_config": "worddrop",
+  "seeds": [
+    13,
+    42,
+    2026
+  ],
+  "models": {
+    "C13": "runs/distilled-seed13/best.pt",
+    "C42": "runs/distilled-seed42/best.pt",
+    "C2026": "runs/distilled-seed2026/best.pt",
+    "S13": "runs/worddrop-seed13/best.pt",
+    "S42": "runs/worddrop-seed42/best.pt",
+    "S2026": "runs/worddrop-seed2026/best.pt"
+  },
+  "model_sha256": {
+    "C13": "6614613c3d398da75e53a686e9dbf5a64616dd876880102903dca3c29f15cc4b",
+    "C42": "ba1b6029455b5e15c9c715a3aaba223fad8ef4fa21070717cf129bc187f720ec",
+    "C2026": "2c310e050b88afe822a6e4e3fa1056ba7716565102fc56a5ee75399f67e841c5",
+    "S13": "89f8f2c35accaa7ed6429ad0d439154895acc03482b2462406b2f5af8196d820",
+    "S42": "883b46cfbd4372e85b89698e0a7fa6afc08d666aacb73bc1cdd5ce655e804758",
+    "S2026": "aed51c5964fba89ca837a2ce50bbbffd512fb759ff186b4ea23301ce418dfd0d"
+  },
+  "inputs_sha256": {
+    "data/ud/train.jsonl": "97d20f73f2bdbe295826d8d7d03b6274860a391ddbce71b1b51c7cb03dc65ed8",
+    "data/ud/dev.jsonl": "d80f101f25cf633b2c461571c3f8cdb3db8d6f19efa1ebd4e65c4c77e6ba1c67",
+    "data/ud/test.jsonl": "98c45c432a1bcb6db9ce1789c549217462fd989611dd75c4d4e4a6e556836167",
+    "data/ud/training-stats.json": "8b034ca12bbd87b95a54fe0f474bf824ce0d34c5e3b3d084b405a00305195145",
+    "models/stanza/resources.json": "3efb2833a67c0184fac2ea9986c04f9585bfb89fb943a4ab1a6bcbed641d6be0",
+    "models/stanza/ug/pos/udt_nocharlm.pt": "d3ca64c412b0afd83030b65b03c163302ffdb21d5f811cce484c437603fc50d4",
+    "models/stanza/ug/pretrain/conll17.pt": "dbd9f32d1cc3eaae031239db5fe5b4647525d8db7ab3696289f6dfb9797a8c0c",
+    "models/stanza/ug/tokenize/udt.pt": "a37c32fed1f61f01fe08f815d70e23e46a9ceac0b93d3b257fa6589573e8f81a"
+  },
+  "benchmark_models": {
+    "C13": "runs/distilled-seed13/best.pt",
+    "C42": "runs/distilled-seed42/best.pt",
+    "C2026": "runs/distilled-seed2026/best.pt",
+    "S13": "runs/worddrop-seed13/best.pt",
+    "S42": "runs/worddrop-seed42/best.pt",
+    "S2026": "runs/worddrop-seed2026/best.pt"
+  },
+  "candidates": [
+    "C13",
+    "C42",
+    "C2026"
+  ],
+  "controls": [
+    "S13",
+    "S42",
+    "S2026"
+  ],
+  "release_model": "C13",
+  "release_selection": "Highest dev nonpunct, ties by smaller numerical seed",
+  "dev_nonpunct": {
+    "C13": 0.8849784407411724,
+    "C42": 0.8849784407411724,
+    "C2026": 0.8822981004544925,
+    "S13": 0.8751893718680807,
+    "S42": 0.8797342967020161,
+    "S2026": 0.8812492716466612
+  },
+  "resource_target": "latency",
+  "quality_loss_pp": 1.0,
+  "worst_seed_loss_pp": 1.5,
+  "oov_loss_pp": 2.0,
+  "speedup": 2.0,
+  "protocol_sha256": "0d23eac5f9a3c856ad409b18c0e1c65f007cb3c042b2a042a0744a58731b0470",
+  "source_sha256": {
+    "src/uyghur_pos/__init__.py": "236bd28404887a2e781b79baca284e7608ae7402ecc02f1c42bd9618eb542973",
+    "src/uyghur_pos/acceptance.py": "8fc6f7dcb3e4edb42a5b00a1700e3e0eaadd30799826621ad6e0e2ccab4f4394",
+    "src/uyghur_pos/audit.py": "fa8e3673924c8f2c5055c50de783dffc59f4fbd550f967436852b8c514daa3de",
+    "src/uyghur_pos/cli.py": "969fc33641bb2872a7e545c21f079c3b9f3e08bef6fe73a8cc761df67d2af597",
+    "src/uyghur_pos/data.py": "df38283b3a46432acab95f7c25e6c72cb28f9a400c424395935801b7e7e5235a",
+    "src/uyghur_pos/losses.py": "4d1adc93d4da3215050855f2d6ea806ce6b1667dcbde6b204a33cc68a4aae311",
+    "src/uyghur_pos/metrics.py": "32f40017a7fb75dfe04018285aad16189910fef198c2765551dae67f8b49afb9",
+    "src/uyghur_pos/model.py": "6d5daf18f9c10c85cc97e5190c9ce107a66ec7ca31b781b2875daf4d727625e8",
+    "src/uyghur_pos/prepare.py": "c8c695f6d1a0f371950ee68b679884484486ebbf723cbfa0ff0e7c9a9440f747",
+    "src/uyghur_pos/train.py": "1fb0759ee8e81f40042d1c77bcb8191b4410ebcf6c9e317394e29f3e1e2eeabb",
+    "scripts/accept_final.py": "7e48058d3ec75680c1a1c38dbd6a4c61750d15f45363b40bcb0130be8305b1fb",
+    "scripts/analyze.py": "0312e96f82de05036edc4bf6e5dbdfea49257c40e06fa6f9515c1f8feb8c762c",
+    "scripts/archive_results.py": "206b517ad67c6e82cfedee9ef97a53fbf623b2d820189fc35954581c34e76d98",
+    "scripts/audit_near_duplicates.py": "40d497e1fc63466bedc1f986e2164e507e0b26b39058b27a40ec08979f8df9dd",
+    "scripts/benchmark.py": "d4687b1feca561c6a8b1e78549253d051cd747700d0f8cd01c235626b265cd43",
+    "scripts/bootstrap-autodl.sh": "74009062267c6e1ac97ab4ca80f9ba3dc76a4af23fb63a26399d0dc38ee47ba1",
+    "scripts/build_release.py": "ca482e6460de201affe58a08a4f98bf421d154efffe133e90927ed0c76c66cf3",
+    "scripts/distilled-multiseed.sh": "07114c0fa2c544e32830a946ecdacc55b733bc8b5b350f7bab6cf37aacae2502",
+    "scripts/download_stanza.py": "b425de7cd09bfd26276cdb6fad766c726499fdfdf478f03473f695ac0233c2f1",
+    "scripts/final_quality.py": "2d8aac2a6dd4f864cce5163e7a12356216fa7bfb4a1e6665a245678543367f13",
+    "scripts/final_suite.sh": "f4425aa64c84b5a38286591628015d8bb01085d50446c80726e4d6f5e39d5a06",
+    "scripts/first-run.sh": "3f000de0e7c692a5e160de3c8f0cb3b470d8ed3c8976c14f2bbbbcfe6131da3e",
+    "scripts/formal_benchmark.py": "7b3169b5b8f3bae80ca2b2333a989d2ad0fa72372122878c0fb0f5caca5ec0e1",
+    "scripts/freeze_experiment.py": "80469d01bd37cf90c17a28a13aa54dd63739dfed07b69eb388fa2f35e7a29b11",
+    "scripts/multiseed.sh": "d4ba8ccff0e00099e48a2a69815ed03ae9450c4b2c49e57bc1aab6d0a80d5829",
+    "scripts/remote.py": "6ccedbeb189c8594984f44f0bc9e27909955345385e85da89fcd0ae73467165f",
+    "scripts/report_errors.py": "ca188f21a5414adea5eb80dc37919ba7c10d5fe823d4567eb672baa0f45e1ee0",
+    "scripts/run_job.py": "959de688212572d2c98dc271b45c790d314a986f73319c397fd7fe4be081e78e",
+    "scripts/summarize_development.py": "4ea786e58a9ca8c33211087a90d17dd71c086a17a19ac877325a116f352bbb84",
+    "scripts/teacher_soft_targets.py": "a5fed3ace2e04d82d5019c9efbc38103e5c8321880066afa2c2584db491873cd",
+    "scripts/worddrop-multiseed.sh": "ecb0007b423d545697ef65125700ebe6e12d36929b8e24a513708b8877743719",
+    "scripts/write_model_card.py": "21829748c6c00a1ebfa98295601b70beba7468202f28f7244d35702949e88151"
+  }
+}

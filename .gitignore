@@ -1,0 +1,14 @@
+credentials/
+.venv*/
+__pycache__/
+*.pyc
+*.egg-info/
+.pytest_cache/
+data/
+artifacts/
+models/
+runs/
+*.log
+dist/
+backups/
+operations/

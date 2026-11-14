@@ -1,0 +1,16 @@
+include README.md LICENSE NOTICE.md CITATION.cff MODEL_CARD.md
+include requirements-cpu.txt requirements-cpu.lock
+graft src
+graft scripts
+graft tests
+graft docs
+graft reports
+graft licenses
+global-exclude *.pyc
+global-exclude __pycache__
+prune credentials
+prune artifacts
+prune data
+prune runs
+prune models
+prune dist
