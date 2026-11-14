@@ -1,8 +1,8 @@
-# 维吾尔语 NLP 求职与开源项目
+# Uyghur POS · 轻量维吾尔语词性标注
 
 当前主题：**面向 CPU 部署的轻量维吾尔语词性标注——基于公开数据的模型压缩与误差评测**。
 
-当前阶段（2026-11-14 UTC）：P0–P8 的实验、工程交付和求职展示准备已完成，总判定 **PASS**。训练、冻结后的三种子质量测试、完整 CPU 测量与安装复现均有原始证据。实际公开发布和外部采用尚未发生。详见 [最终评测](reports/P6-final-evaluation.md)、[完成审计](reports/COMPLETION-AUDIT.md) 和 [发行说明](reports/P8-release-notes.md)。
+当前阶段（2026-11-14 UTC）：P0–P8 的实验、工程交付和求职展示准备已完成，总判定 **PASS**。训练、冻结后的三种子质量测试、完整 CPU 测量与安装复现均有原始证据。源码公开于 [GitHub 仓库](https://github.com/jide315/uyghur-pos)，发行材料见 [v0.1.0 Release](https://github.com/jide315/uyghur-pos/releases/tag/v0.1.0)；尚无第三方复现或外部采用证据。详见 [最终评测](reports/P6-final-evaluation.md)、[完成审计](reports/COMPLETION-AUDIT.md) 和 [发行说明](reports/P8-release-notes.md)。
 
 | 测试指标 | Stanza 基线 | 学生三个种子均值 | 发行 C13 |
 | --- | ---: | ---: | ---: |
@@ -15,6 +15,15 @@
 当前执行状态见 [进度索引](reports/README.md)，最新开发集改进见 [P5 结果](reports/P5-development-results.md)。原创代码采用 [MIT 许可](LICENSE)，外部数据与权重另遵守各自条款。
 
 本轮交付与验证见 [首版实现报告](reports/implementation-2026-11-13.md)。
+
+## 下载与快速使用
+
+- [发行模型 C13（约 13 MB）](https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/uyghur-pos-0.1.0-model.tar.gz)
+- [完整证据与测量记录（约 2 MB）](https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/uyghur-pos-0.1.0-evidence.tar.gz)
+- [六模型实验权重（约 79 MB）](https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/uyghur-pos-0.1.0-experiments.tar.gz)
+- [发行清单](https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/release-manifest.json) · [SHA-256](https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/SHA256SUMS)
+
+按 [快速使用](docs/QUICKSTART.md) 在 CPU 上运行已训练模型；完整训练与评测见 [复现指南](docs/REPRODUCING.md)。
 
 ## 当前实现
 
@@ -63,7 +72,7 @@ python scripts/benchmark.py --model runs/my-run/best.pt --data data/ud/dev.jsonl
 - [实验、预算与验收计划](docs/plans/02-experiment-plan.md)
 - [备选方向与决策记录](docs/plans/03-decisions-and-alternatives.md)
 
-方案文档保留预登记目标与历史状态；已执行结果以进度索引和最终报告为准。发行候选与证据包的文件及哈希见 `dist/release-manifest.json`，目前仅本地保存，没有虚构公开下载地址。
+方案文档保留预登记目标与历史状态；已执行结果以进度索引和最终报告为准。源码、发行模型、六模型实验包、原始证据、wheel／sdist 与哈希清单见 [v0.1.0 Release](https://github.com/jide315/uyghur-pos/releases/tag/v0.1.0)。
 
 阶段顺序：P0 边界 → P1 数据 → P2 基线 → P3 执行环境 → P4 监督学生 → P5 错误驱动改进 → P6 最终评测 → P7 可复现候选包 → P8 开源与求职展示准备。
 

@@ -2,7 +2,16 @@
 
 ## 使用已训练模型
 
-准备 Python 3.12，将单独取得的模型包放到源码目录的 `dist/` 下（需要时先创建该目录），然后在源码根目录建立虚拟环境：
+以下以 Linux、Python 3.12 为例。先获取源码与发行模型，再建立虚拟环境：
+
+```bash
+git clone https://github.com/jide315/uyghur-pos.git
+cd uyghur-pos
+mkdir -p dist
+curl -fL https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/uyghur-pos-0.1.0-model.tar.gz -o dist/uyghur-pos-0.1.0-model.tar.gz
+curl -fL https://github.com/jide315/uyghur-pos/releases/download/v0.1.0/SHA256SUMS -o dist/SHA256SUMS
+(cd dist && sha256sum --ignore-missing -c SHA256SUMS)
+```
 
 ```bash
 python3 -m venv .venv

@@ -24,3 +24,11 @@
 ## 可核验交付与限制
 
 [最终报告](P6-final-evaluation.md)、[发行说明](P8-release-notes.md)、[实际 CPU 演示](P8-demo-transcript.md)、[架构与数据流](../docs/ARCHITECTURE.md)、[复现命令](../docs/REPRODUCING.md)。发行模型与三个种子的质量、全部尝试和门槛均保留。资源收益仅限记录的主机／线程／批次；C13 准确率区间跨零，不写显著优于基线。实际公开发布与外部采用暂无。
+
+## 公开作品入口
+
+仓库：https://github.com/jide315/uyghur-pos
+
+模型、原始证据、安装包与校验和：https://github.com/jide315/uyghur-pos/releases/tag/v0.1.0
+
+公开发布不代表已经获得第三方采用或验证真实领域需求，当前仍无外部反馈证据。

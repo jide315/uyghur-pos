@@ -85,3 +85,9 @@ final-resource-recovered 已退出 0，完整 35 个新进程、每进程 900 �
 用户已授权创建 GitHub 仓库并公开发布。发布审查的 9 项测试通过、无关键代码阻碍；修复完整复现命令遗漏 baseline 可选依赖的问题，并增加公开代码包 CI。
 
 用户提供的 /root/src/github_voucher/ 为账号 jide315 的 Windows DPAPI 连接配置；被引用的 .github-token.dpapi 不在目录内，当前 Linux 主机不能直接使用。连接元数据已私有归档 credentials/github_voucher/；等待本机可读取的 Token 文件路径或设备登录方式，尚未创建仓库或公开上传。
+
+## GitHub 公开发布（用户后续授权）
+
+已完成 GitHub 官方设备授权并验证账号 jide315；公开仓库 https://github.com/jide315/uyghur-pos 已创建。Release 版本固定 v0.1.0，上传源码、C13、六模型实验、原始证据、wheel／sdist、发行清单和 SHA256SUMS。发布状态以服务端核验及本机 operations/local/publication-status.json 为准。
+
+本次有效授权保存在 credentials/gh/（目录 700、文件 600）。之前 github_voucher 的 Windows 脚本和旧项目副本已删除，共享连接说明已替换为当前 Linux GitHub CLI 配置引用；凭证不进入 Git 或 Release。
