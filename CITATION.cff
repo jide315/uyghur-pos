@@ -5,6 +5,8 @@ authors:
   - name: "uyghur-pos contributors"
 type: software
 version: 0.1.0
-date-released: 2026-11-13
+date-released: 2026-11-14
+repository-code: "https://github.com/jide315/uyghur-pos"
+url: "https://github.com/jide315/uyghur-pos/releases/tag/v0.1.0"
 license: MIT
 abstract: "Pretokenized UPOS experiments; original code MIT, data and pretrained resources separately licensed."
