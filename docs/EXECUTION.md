@@ -14,7 +14,7 @@
 | P5 | 有依据的改进、同容量对照、候选冻结 | 已完成；失败分支保留，六模型 test 前冻结 |
 | P6 | 三种子质量、bootstrap、正式 CPU 测量及判定 | 完整恢复轮 35 进程完成，全部质量／资源／发行门槛 PASS，独立复算一致 |
 | P7 | 干净安装、推理／评测复现、模型卡、发行包 | wheel 复现通过；六个发行文件逐成员、凭据排除及权重哈希核查通过 |
-| P8 | 求职材料、演示、可核验发行候选 | 展示、发行说明、实际 CLI 演示与完整证据已准备；尚未公开发布 |
+| P8 | 求职材料、演示、可核验发行材料 | 展示、发行说明、实际 CLI 演示与完整证据已准备；GitHub 源码仓库已公开，发行入口见 P8-release-notes.md |
 
 ## 不变条件
 
@@ -34,7 +34,7 @@
 
 后续执行结束逐项补证据路径与结论；阻碍某一项时继续其他独立工作，不虚报完成。
 
-## 当前恢复要点
+## 恢复前记录（历史状态）
 
 - 冻结时间：2026-11-13 22:54:25 UTC；文件 `artifacts/final-freeze.json`，公开副本 `reports/final-freeze.json`。发行 C13，seed13 的 checkpoint 哈希 `6614613c3d398da75e53a686e9dbf5a64616dd876880102903dca3c29f15cc4b`。
 - `final-evaluation` 后台任务已正常结束。首次质量结果在 `artifacts/final-quality/`，不可覆盖；总体三种子均值 90.1033%，基线 89.6902%。
@@ -74,7 +74,7 @@ SSH 与直接 TCP 均收到 Connection refused，实例状态未知，详见 rep
 
 final-resource-recovered 已退出 0，完整 35 个新进程、每进程 900 句。最终资源目录 artifacts/final-benchmark/ 是 recovered 的完整副本；首轮为 final-benchmark-attempt1，中断轮 final-benchmark-repeat。final-acceptance.json 为 PASS，所有布尔门槛为 true。原质量预测未重跑，代码、模型与协议仍匹配冻结哈希。
 
-最终模型卡、P6、P8、复现与费用记录已按实际结果更新。发行文件含源码／模型／六模型实验／全部测量证据、wheel 与 sdist，清单与 SHA-256 在 dist；交付前检查见 reports/COMPLETION-AUDIT.md 和 artifacts/release-package-audit.json。实际公开发布与第三方采用不在本轮必需项，仍如实记录暂无。
+最终模型卡、P6、P8、复现与费用记录已按实际结果更新。发行文件含源码／模型／六模型实验／全部测量证据、wheel 与 sdist，清单与 SHA-256 在 dist；交付前检查见 reports/COMPLETION-AUDIT.md 和 artifacts/release-package-audit.json。本节记录实验验收与本机交付完成时的状态；后续公开发布见文末，第三方采用仍暂无。
 
 本文件前面的连接故障、INCONCLUSIVE 和中断状态保留为历史；最新状态以本节、队列表及最终报告为准。
 
@@ -84,10 +84,12 @@ final-resource-recovered 已退出 0，完整 35 个新进程、每进程 900 �
 
 用户已授权创建 GitHub 仓库并公开发布。发布审查的 9 项测试通过、无关键代码阻碍；修复完整复现命令遗漏 baseline 可选依赖的问题，并增加公开代码包 CI。
 
-用户提供的 /root/src/github_voucher/ 为账号 jide315 的 Windows DPAPI 连接配置；被引用的 .github-token.dpapi 不在目录内，当前 Linux 主机不能直接使用。连接元数据已私有归档 credentials/github_voucher/；等待本机可读取的 Token 文件路径或设备登录方式，尚未创建仓库或公开上传。
+发布准备时，用户提供的 /root/src/github_voucher/ 为账号 jide315 的 Windows DPAPI 连接配置；被引用的 .github-token.dpapi 不在目录内，Linux 主机当时不能直接使用。连接元数据曾私有归档 credentials/github_voucher/；当时因等待可用认证而尚未创建仓库或公开上传。该历史阻碍已由下节的设备授权解除，旧副本已按用户授权清理。
 
 ## GitHub 公开发布（用户后续授权）
 
-已完成 GitHub 官方设备授权并验证账号 jide315；公开仓库 https://github.com/jide315/uyghur-pos 已创建。Release 版本固定 v0.1.0，上传源码、C13、六模型实验、原始证据、wheel／sdist、发行清单和 SHA256SUMS。发布状态以服务端核验及本机 operations/local/publication-status.json 为准。
+已完成 GitHub 官方设备授权并验证账号 jide315；公开仓库 https://github.com/jide315/uyghur-pos 已创建，main 已推送。提交 7ec9824419f9732451da9b5fadeeef1c16ab3727 的 [GitHub Actions 测试与构建](https://github.com/jide315/uyghur-pos/actions/runs/43541536829) 已通过。
+
+Release 版本固定 v0.1.0，发行资产包括源码、C13、六模型实验、原始证据、wheel／sdist、发行清单和 SHA256SUMS。仓库与发行入口见 reports/P8-release-notes.md；资产上传与校验的最终状态以服务端核验及本机 operations/local/publication-status.json 为准。尚无第三方复现、反馈或采用证据。
 
 本次有效授权保存在 credentials/gh/（目录 700、文件 600）。之前 github_voucher 的 Windows 脚本和旧项目副本已删除，共享连接说明已替换为当前 Linux GitHub CLI 配置引用；凭证不进入 Git 或 Release。

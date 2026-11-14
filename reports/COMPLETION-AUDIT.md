@@ -30,10 +30,10 @@
 | P7 UTF-8／空列表／OOV／非法输入／最大长度 | 实测矩阵，正常退出 0，非法退出 2；tokens 原样、标签等长 | 完成 |
 | P7 解析／masking／对齐／保存加载必要测试 | final-release-tests.txt，9 passed；pip check 无冲突 | 完成 |
 | P7 许可分离、来源／引用、获取及训练命令 | MODEL_CARD、NOTICE、CITATION、完整许可、REPRODUCING | 完成候选；无第三方复现声明 |
-| P7 源码／发行模型／六模型／原始证据／哈希 | dist 四个候选归档、wheel／sdist、release-manifest.json | 本地候选；打包核查证据在 artifacts/release-package-audit.json |
+| P7 源码／发行模型／六模型／原始证据／哈希 | dist 四个归档、wheel／sdist、release-manifest.json；GitHub 仓库与 v0.1.0 发行入口见 P8-release-notes.md | 发行材料已准备；打包核查证据在 artifacts/release-package-audit.json，上传校验另记 |
 | P8 问题、已有方法、改动、效果、成本、限制 | P8-portfolio.md、P8-release-notes.md、P6、COSTS | 完成候选说明 |
 | P8 3–5 分钟流程、实际 CPU 推理、质量／资源表 | P8-demo-transcript.md、P8-portfolio.md、P6 表 | 完成准备；未录像或声称现场第三方验证 |
-| P8 简历不夸大、真实发布及社区采用分开 | 简历数字对应最终 PASS，限定本项目场景；无公开 URL/tag、无采用、无上游提交 | 完成准备；公开发布不属本轮必需 |
+| P8 简历不夸大、真实发布及社区采用分开 | 简历数字对应最终 PASS，限定本项目场景；源码仓库已公开，v0.1.0 发行入口见 P8-release-notes.md；无采用、无上游提交 | 完成；公开仓库不替代第三方验证 |
 
 审计依据不是“脚本退出 0”本身：全部七模型对完整 test 的指标已从预测重新计算，六个训练的容量／预算／数据来源和有限 loss 已检查；权重、输入及冻结源码核对成功。打包核查逐个成员、校验哈希并检查凭据排除；不能将这些工程检查替代资源重测。
 
